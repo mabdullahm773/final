@@ -2,10 +2,10 @@
 FROM python:3.9-slim
 
 # Set dir
-WORKDIR /app
+WORKDIR /mabdullah
 
 # Copy file
-COPY file.py .
+COPY mabdullah.py .
 
 #cmd comand
 CMD ["python", "file.py"]
