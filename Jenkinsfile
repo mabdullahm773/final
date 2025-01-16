@@ -34,16 +34,11 @@ pipeline {
                     // Log into Docker Hub using credentials
                     echo "Logging into Docker Hub"
                     
-                    bat """
-                        echo %DOCKER_PASS% | docker login %DOCKER_REGISTRY% -u %DOCKER_USER% --password-stdin
-                    """
+
                     
                     // Push the Docker image
                     echo "Pushing Docker image: ${DOCKER_IMAGE}"
-                    
-                    bat """
-                        docker push %DOCKER_IMAGE%
-                    """
+
                 }
             }
         }
